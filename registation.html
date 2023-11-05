@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="registation.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="surveyForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
+             <div>
+             <label for="lastName">Last Name:</label>
+             <input type="text" id="lastName" name="lastName" required><br><br>
+           </div>
+             <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+            </div>
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="USA">USA</option>
+                <option value="Canada">INDIA</option>
+                <option value="UK">UK</option>
+                
+            </select><br><br>
+            <label>Gender:</label>
+            <input type="checkbox" id="male" name="gender" value="Male"> Male
+            <input type="checkbox" id="female" name="gender" value="Female"> Female<br><br>
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required><br><br>
+            <label>is this first time You are using our product & service?</label>
+            <div class="circle-checkbox">
+                <input type="checkbox" id="yes" name="yes">
+                <label for="yes" class="circle-label">Yes</label>
+                <input type="checkbox" id="no" name="no">
+                <label for="no" class="circle-label">No</label>
+            </div>
+            <label>would you suggestion to your friends and colleages?</label>
+            <div class="circle-checkbox">
+                <input type="checkbox" id="yes" name="yes">
+                <label for="yes" class="circle-label">Yes</label>
+                <input type="checkbox" id="no" name="no">
+                <label for="no" class="circle-label">No</label>
+            </div>
+            <label>How to satisfied are you with our company over all?</label>
+            <div class="circle-checkbox">
+                <input type="checkbox" id="yes" name="yes">
+                <label for="yes" class="circle-label">Yes</label>
+                <input type="checkbox" id="no" name="no">
+                <label for="no" class="circle-label">No</label>
+            </div>
+            <label for="">Do you have suggestion to improve our service?</label>
+            <div class="box">   
+                <textarea   type="text" name="" id="text"></textarea>
+            </div>
+            <button type="button" onclick="submitForm()">Submit</button>
+            <button type="button" onclick="resetForm()">Reset</button>   
+        </form>
+    </div>
+    <div class="popup" id="popup">
+        <h2>Form Submission Details:</h2>
+        <p>First Name: <span id="popupFirstName"></span></p>
+        <p>Last Name: <span id="popupLastName"></span></p>
+        <p>Date of Birth: <span id="popupDOB"></span></p>
+        <p>Country: <span id="popupCountry"></span></p>
+        <p>Gender: <span id="popupGender"></span></p>
+        <p>Profession: <span id="popupProfession"></span></p>
+        <p>Email: <span id="popupEmail"></span></p>
+        <p>Mobile Number: <span id="popupMobile"></span></p><br>
+        <p>is this first time You are using our product & service?<span id="service"></span></p><br>
+        <p>would you suggestion to your friends and colleages?<span id="colleages"></span></p><br>
+        <p>How to satisfied are you with our company over all?<span id="all"></span></p><br>
+        <button onclick="closePopup()">Close</button>
+    </div>
+    <script src="registation.js"></script>
+</body>
+</html>
